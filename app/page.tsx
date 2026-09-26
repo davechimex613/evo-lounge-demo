@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -43,7 +43,7 @@ const heroMedia = [
   },
   {
     src: "/food/goat-head.jpg",
-    label: "Goat Head · Isi Ewu",
+    label: "Goat Head Â· Isi Ewu",
   },
   {
     src: "/food/suya.jpg",
@@ -151,7 +151,7 @@ export default function Home() {
                 className="h-8 w-auto object-contain brightness-0 invert"
               />
               <span className="hidden text-[9px] uppercase tracking-[0.25em] text-white/60 sm:block">
-                Eatery Â· Lounge Â· Rooftop Bar
+                Eatery Ã‚Â· Lounge Ã‚Â· Rooftop Bar
               </span>
             </button>
 
@@ -258,7 +258,7 @@ export default function Home() {
                 <div className="mb-6 flex items-center gap-3">
                   <span className="h-px w-10 bg-white/70" />
                   <p className="text-[9px] uppercase tracking-[0.3em] text-white/75">
-                    Nnewi Â· Anambra Â· Nigeria
+                    Nnewi Ã‚Â· Anambra Ã‚Â· Nigeria
                   </p>
                 </div>
 
@@ -639,7 +639,7 @@ export default function Home() {
           </div>
 
           <div className="mx-4 mb-4 overflow-hidden rounded-[22px] md:mx-8 md:mb-8">
-            <div className="relative aspect-[16/7] min-h-[280px]">
+            <div className="relative h-[520px] overflow-hidden md:h-[680px] lg:h-[760px]">
               <video
                 autoPlay
                 muted
@@ -648,7 +648,7 @@ export default function Home() {
                 preload="metadata"
                 className="absolute inset-0 h-full w-full object-cover"
               >
-                <source src="/evo-hero.mp4" type="video/mp4" />
+                <source src="/nightlife.mp4" type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-black/10" />
@@ -722,7 +722,7 @@ export default function Home() {
                 preload="metadata"
                 className="absolute inset-0 h-full w-full object-cover"
               >
-                <source src="/evo-hero.mp4" type="video/mp4" />
+                <source src="/nightlife.mp4" type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-black/55" />
@@ -928,8 +928,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col justify-between gap-3 border-t border-white/10 px-6 py-6 text-[9px] uppercase tracking-[0.16em] text-white/30 md:flex-row md:px-8">
-            <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Evo Eatery, Lounge & Rooftop</p>
-            <p>44 Igwe Orizu Road ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Nnewi ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Anambra</p>
+            <p>ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Evo Eatery, Lounge & Rooftop</p>
+            <p>44 Igwe Orizu Road ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Nnewi ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Anambra</p>
           </div>
 
         </div>
@@ -1003,7 +1003,7 @@ export default function Home() {
                       }
                       className="rounded-full bg-white/10 px-4 py-2 text-xs text-white backdrop-blur-md transition hover:bg-white hover:text-black"
                     >
-                      ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
+                      ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
                     </button>
 
                     <button
@@ -1014,7 +1014,7 @@ export default function Home() {
                       }
                       className="rounded-full bg-white/10 px-4 py-2 text-xs text-white backdrop-blur-md transition hover:bg-white hover:text-black"
                     >
-                      ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢
+                      ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢
                     </button>
                   </div>
                 </div>
@@ -1040,4 +1040,5 @@ export default function Home() {
     </main>
   );
 }
+
 
