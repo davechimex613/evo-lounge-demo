@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -43,7 +43,7 @@ const heroMedia = [
   },
   {
     src: "/food/goat-head.jpg",
-    label: "Goat Head Â· Isi Ewu",
+    label: "Goat Head &middot; Isi Ewu",
   },
   {
     src: "/food/suya.jpg",
@@ -151,7 +151,7 @@ export default function Home() {
                 className="h-8 w-auto object-contain"
               />
               <span className="hidden text-[9px] uppercase tracking-[0.25em] text-white/60 sm:block">
-                Eatery Ã‚Â· Lounge Ã‚Â· Rooftop Bar
+                Eatery &middot; Lounge &middot; Rooftop Bar
               </span>
             </button>
 
@@ -258,7 +258,7 @@ export default function Home() {
                 <div className="mb-6 flex items-center gap-3">
                   <span className="h-px w-10 bg-white/70" />
                   <p className="text-[9px] uppercase tracking-[0.3em] text-white/75">
-                    Nnewi Ã‚Â· Anambra Ã‚Â· Nigeria
+                    Nnewi &middot; Anambra &middot; Nigeria
                   </p>
                 </div>
 
@@ -928,8 +928,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col justify-between gap-3 border-t border-white/10 px-6 py-6 text-[9px] uppercase tracking-[0.16em] text-white/30 md:flex-row md:px-8">
-            <p>ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Evo Eatery, Lounge & Rooftop</p>
-            <p>44 Igwe Orizu Road ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Nnewi ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· Anambra</p>
+            <p>&copy; {new Date().getFullYear()} Evo Eatery, Lounge & Rooftop</p>
+            <p>44 Igwe Orizu Road &middot; Nnewi &middot; Anambra</p>
           </div>
 
         </div>
@@ -946,12 +946,9 @@ export default function Home() {
             <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#171714]">
               <div className="flex items-center justify-between px-5 py-4 text-white md:px-7">
                 <div>
-                  <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">
-                    Evo
-                  </p>
+                  <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Evo</p>
                   <p className="mt-1 font-serif text-xl">Gallery</p>
                 </div>
-
                 <button
                   onClick={() => setGalleryOpen(false)}
                   className="rounded-full border border-white/15 p-3 transition hover:bg-white hover:text-black"
@@ -960,52 +957,47 @@ export default function Home() {
                   <X size={17} />
                 </button>
               </div>
-
               <div className="relative min-h-0 flex-1 p-3 pt-0 md:p-5 md:pt-0">
                 <div className="relative h-full overflow-hidden rounded-[22px] bg-black">
                   <AnimatePresence mode="wait">
-  {galleryMedia[activeGallery].type === "image" ? (
-    <motion.img
-      key={galleryMedia[activeGallery].src}
-      src={galleryMedia[activeGallery].src}
-      alt="Evo Lounge gallery"
-      className="h-full w-full object-contain"
-      initial={{ opacity: 0, scale: 1.015 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.99 }}
-      transition={{ duration: 0.8 }}
-    />
-  ) : (
-    <motion.video
-      key={galleryMedia[activeGallery].src}
-      src={galleryMedia[activeGallery].src}
-      className="h-full w-full object-contain"
-      autoPlay
-      muted
-      loop
-      playsInline
-    />
-  )}
-</AnimatePresence>
-
+                    {galleryMedia[activeGallery].type === "image" ? (
+                      <motion.img
+                        key={galleryMedia[activeGallery].src}
+                        src={galleryMedia[activeGallery].src}
+                        alt="Evo Lounge gallery"
+                        className="h-full w-full object-contain"
+                        initial={{ opacity: 0, scale: 1.015 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.99 }}
+                        transition={{ duration: 0.8 }}
+                      />
+                    ) : (
+                      <motion.video
+                        key={galleryMedia[activeGallery].src}
+                        src={galleryMedia[activeGallery].src}
+                        className="h-full w-full object-contain"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    )}
+                  </AnimatePresence>
                   <div className="absolute bottom-5 left-5 rounded-full bg-black/50 px-4 py-2 text-[9px] uppercase tracking-[0.18em] text-white backdrop-blur-md">
                     {String(activeGallery + 1).padStart(2, "0")} /{" "}
                     {String(galleryMedia.length).padStart(2, "0")}
                   </div>
-
                   <div className="absolute bottom-5 right-5 flex gap-2">
                     <button
                       onClick={() =>
                         setActiveGallery(
-                          (activeGallery - 1 + galleryMedia.length) %
-                            galleryMedia.length
+                          (activeGallery - 1 + galleryMedia.length) % galleryMedia.length
                         )
                       }
                       className="rounded-full bg-white/10 px-4 py-2 text-xs text-white backdrop-blur-md transition hover:bg-white hover:text-black"
                     >
-                      ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
+                      &larr;
                     </button>
-
                     <button
                       onClick={() =>
                         setActiveGallery(
@@ -1014,12 +1006,11 @@ export default function Home() {
                       }
                       className="rounded-full bg-white/10 px-4 py-2 text-xs text-white backdrop-blur-md transition hover:bg-white hover:text-black"
                     >
-                      ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢
+                      &rarr;
                     </button>
                   </div>
                 </div>
               </div>
-
               <div className="flex gap-1 overflow-x-auto px-5 py-4 md:px-7">
                 {galleryMedia.map((media, index) => (
                   <button
@@ -1029,7 +1020,7 @@ export default function Home() {
                       activeGallery === index
                         ? "w-12 bg-white"
                         : "w-5 bg-white/20"
-                    }`}
+                    }}`}
                   />
                 ))}
               </div>
