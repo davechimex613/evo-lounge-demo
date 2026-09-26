@@ -146,9 +146,9 @@ export default function Home() {
               className="flex items-center gap-3"
             >
               <img
-                src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100063649896241"
+                src="/evo-logo.jpg"
                 alt="Evo"
-                className="h-8 w-auto object-contain brightness-0 invert"
+                className="h-8 w-auto object-contain"
               />
               <span className="hidden text-[9px] uppercase tracking-[0.25em] text-white/60 sm:block">
                 Eatery Ã‚Â· Lounge Ã‚Â· Rooftop Bar
@@ -733,9 +733,9 @@ export default function Home() {
                 </p>
 
                 <img
-                  src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=100063649896241"
+                  src="/evo-logo.jpg"
                   alt="Evo"
-                  className="h-14 w-auto object-contain brightness-0 invert md:h-20"
+                  className="h-14 w-auto object-contain md:h-20"
                 />
 
                 <p className="mt-6 max-w-[560px] font-serif text-[28px] leading-tight md:text-[42px]">
@@ -1040,5 +1040,7 @@ export default function Home() {
     </main>
   );
 }
+
+
 
 
