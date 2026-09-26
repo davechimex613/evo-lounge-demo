@@ -137,13 +137,13 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f5f2eb] text-[#171714]">
-      {/* NAVIGATION + HERO */}
-      <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
-        <div className="mx-auto max-w-[1380px]">
-          <div className="flex items-center justify-between rounded-full border border-white/20 bg-black/25 px-5 py-3 text-white backdrop-blur-xl md:px-7">
+      {/* NAVIGATION */}
+      <header className="relative z-50 bg-[#11110f] text-white">
+        <div className="mx-auto max-w-[1440px] px-4 py-4 md:px-6 md:py-5">
+          <div className="flex items-center justify-between gap-4">
             <button
               onClick={() => scrollTo("home")}
-              className="flex items-center gap-3"
+              className="flex shrink-0 items-center gap-3"
             >
               <img
                 src="/evo-logo.jpg"
@@ -155,84 +155,47 @@ export default function Home() {
               </span>
             </button>
 
-            <nav className="hidden items-center gap-8 md:flex">
+            <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
               <button
                 onClick={() => scrollTo("experience")}
-                className="text-[10px] uppercase tracking-[0.2em] text-white/80 transition hover:text-white"
+                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
               >
                 Experience
               </button>
 
               <button
                 onClick={() => scrollTo("menu")}
-                className="text-[10px] uppercase tracking-[0.2em] text-white/80 transition hover:text-white"
+                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
               >
                 Menu
               </button>
 
               <button
                 onClick={() => scrollTo("gallery")}
-                className="text-[10px] uppercase tracking-[0.2em] text-white/80 transition hover:text-white"
+                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
               >
                 Gallery
               </button>
 
               <button
                 onClick={() => scrollTo("contact")}
-                className="text-[10px] uppercase tracking-[0.2em] text-white/80 transition hover:text-white"
+                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
               >
                 Contact
               </button>
             </nav>
 
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setGalleryOpen(true)}
-                className="hidden rounded-full border border-white/35 px-5 py-2.5 text-[9px] font-medium uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-black sm:block"
-              >
-                View Gallery
-              </button>
-
-              <button
-                onClick={() => setMobileOpen(!mobileOpen)}
-                className="rounded-full border border-white/20 p-2.5 md:hidden"
-                aria-label="Toggle navigation"
-              >
-                {mobileOpen ? <X size={16} /> : <MenuIcon size={16} />}
-              </button>
-            </div>
+            <button
+              onClick={() => setGalleryOpen(true)}
+              className="hidden rounded-full border border-white/30 px-4 py-2 text-[8px] font-medium uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-black sm:block md:px-5 md:py-2.5 md:text-[9px]"
+            >
+              View Gallery
+            </button>
           </div>
-
-          <AnimatePresence>
-            {mobileOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="mt-2 overflow-hidden rounded-3xl border border-white/10 bg-[#171714]/95 p-4 text-white backdrop-blur-xl md:hidden"
-              >
-                {[
-                  ["Experience", "experience"],
-                  ["Menu", "menu"],
-                  ["Gallery", "gallery"],
-                  ["Contact", "contact"],
-                ].map(([label, id]) => (
-                  <button
-                    key={id}
-                    onClick={() => scrollTo(id)}
-                    className="block w-full border-b border-white/10 py-4 text-left text-[10px] uppercase tracking-[0.2em] text-white/75 last:border-0"
-                  >
-                    {label}
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </header>
-
-      <section id="home" className="px-3 pt-3 md:px-5">
-        <div className="relative mx-auto max-w-[1440px] overflow-hidden rounded-[28px] bg-[#181714]">
+      <section id="home">
+        <div className="relative w-full overflow-hidden bg-[#181714]">
           <div className="relative h-[680px] md:h-[780px]">
             <AnimatePresence mode="sync">
               <motion.img
