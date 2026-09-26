@@ -155,43 +155,43 @@ export default function Home() {
               </span>
             </button>
 
-            <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
-              <button
-                onClick={() => scrollTo("experience")}
-                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
-              >
-                Experience
-              </button>
-
-              <button
-                onClick={() => scrollTo("menu")}
-                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
-              >
-                Menu
-              </button>
-
-              <button
-                onClick={() => scrollTo("gallery")}
-                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
-              >
-                Gallery
-              </button>
-
-              <button
-                onClick={() => scrollTo("contact")}
-                className="text-[8px] uppercase tracking-[0.16em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
-              >
-                Contact
-              </button>
-            </nav>
-
             <button
               onClick={() => setGalleryOpen(true)}
-              className="hidden rounded-full border border-white/30 px-4 py-2 text-[8px] font-medium uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-black sm:block md:px-5 md:py-2.5 md:text-[9px]"
+              className="rounded-full border border-white/30 px-3 py-2 text-[8px] font-medium uppercase tracking-[0.16em] text-white transition hover:bg-white hover:text-black sm:px-4 md:px-5 md:py-2.5 md:text-[9px]"
             >
               View Gallery
             </button>
           </div>
+
+          <nav className="mt-4 flex w-full items-center justify-between border-t border-white/10 pt-3 md:mt-0 md:w-auto md:justify-center md:gap-8 md:border-0 md:pt-0">
+            <button
+              onClick={() => scrollTo("experience")}
+              className="text-[8px] uppercase tracking-[0.12em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
+            >
+              Experience
+            </button>
+
+            <button
+              onClick={() => scrollTo("menu")}
+              className="text-[8px] uppercase tracking-[0.12em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
+            >
+              Menu
+            </button>
+
+            <button
+              onClick={() => scrollTo("gallery")}
+              className="text-[8px] uppercase tracking-[0.12em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
+            >
+              Gallery
+            </button>
+
+            <button
+              onClick={() => scrollTo("contact")}
+              className="text-[8px] uppercase tracking-[0.12em] text-white/75 transition hover:text-white sm:text-[9px] md:text-[10px] md:tracking-[0.2em]"
+            >
+              Contact
+            </button>
+          </nav>
         </div>
       </header>
       <section id="home">
